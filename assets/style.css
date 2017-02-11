@@ -1,0 +1,27 @@
+.nav-wrapper {
+    margin-left: 1%;
+}
+
+.nav-content .wrapper {
+    margin-left: 1%;
+    height: 50vh;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
+.theme {
+    background-color: #448aff;
+}
+
+.theme-2 {
+    background-color: #2979ff;
+}
+
+.icon:hover { /* Customizes GitHub icon */
+  fill: #e1e1e1;
+}
+.icon { /* Customizes all icons at once */
+  display: inline-block;
+   fill: white;
+}
