@@ -1,3 +1,13 @@
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
 .nav-wrapper {
     margin-left: 1%;
 }
@@ -11,11 +21,11 @@
 }
 
 .theme {
-    background-color: #448aff;
+    background-color: #1976d2!important;
 }
 
 .theme-2 {
-    background-color: #2979ff;
+    background-color: #1565c0!important;
 }
 
 .icon:hover { /* Customizes GitHub icon */
@@ -24,4 +34,30 @@
 .icon { /* Customizes all icons at once */
   display: inline-block;
    fill: white;
+}
+
+.contact-email {
+    line-height: 300%;
+    vertical-align: middle;
+}
+.contact-email:hover {
+    background-color: #1565c0;
+}
+
+.contact-email-text {
+    display: flex;
+    align-items: center;
+}
+
+.social-hero {
+    font-size: 20px;
+}
+
+.footer-linktab:hover {
+    background-color: #1565c0;
+}
+
+.footer-linktab-text {
+    line-height: 250%;
+    margin-left: 10px;
 }
