@@ -3,7 +3,7 @@
      $(".button-collapse").sideNav();
   });
 
-var host = "mocogeeks.com"
+var host = "mocogeeks.com";
 if (window.location.host == host && window.location.protocol != "https:") {
-  window.location.protocol = "https:"
+  window.location.protocol = "https:";
 }
