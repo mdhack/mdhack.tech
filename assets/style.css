@@ -2,6 +2,7 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #e3f2fd;
   }
 
   main {
@@ -60,4 +61,16 @@
 .footer-linktab-text {
     line-height: 250%;
     margin-left: 10px;
+}
+
+.page-content {
+    margin: 1%;
+}
+
+.card-action a {
+    color: #1e88e5!important;
+}
+
+.card-action a:hover {
+    color: #bbdefb!important;
 }
