@@ -74,3 +74,84 @@
 .card-action a:hover {
     color: #bbdefb!important;
 }
+
+.hack {
+    text-align: center;
+}
+
+.card img {
+    filter: brightness(60%);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.card img:hover {
+    filter: brightness(100%);
+}
+
+.fa-heart {
+    color: red;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+.faa-pulse.animated,
+.faa-pulse.animated-hover:hover,
+.faa-parent.animated-hover:hover > .faa-pulse {
+  -webkit-animation: pulse 0.5s linear infinite;
+  animation: pulse 0.5s linear infinite;
+}
