@@ -15,10 +15,12 @@
 
 .nav-content .wrapper {
     margin-left: 1%;
-    height: 50vh;
+    min-height: 50vh;
     text-align: center;
     vertical-align: middle;
-    padding-top: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .theme {
@@ -154,4 +156,8 @@
 .faa-parent.animated-hover:hover > .faa-pulse {
   -webkit-animation: pulse 0.5s linear infinite;
   animation: pulse 0.5s linear infinite;
+}
+
+.notice {
+    text-align: center;
 }
