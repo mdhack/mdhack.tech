@@ -54,20 +54,17 @@
             </a>
             <ul>
                 <li>
-                    <a href="apply.html" class="btn-floating red tooltipped" data-position="top"
-                        data-delay="50" data-tooltip="Join"><i class="material-icons">person_add</i></a>
+                    <a href="apply.html" class="btn-floating red tooltipped" data-position="top" data-delay="50" data-tooltip="Join"><i class="material-icons">person_add</i></a>
                 </li>
                 <li>
-                    <a href="https://blog.mocogeeks.com" class="btn-floating yellow darken-2 tooltipped" data-position="top"
-                        data-delay="50" data-tooltip="Blog"><i class="material-icons">list</i></a>
+                    <a href="https://blog.mocogeeks.com" class="btn-floating yellow darken-2 tooltipped" data-position="top" data-delay="50"
+                        data-tooltip="Blog"><i class="material-icons">list</i></a>
                 </li>
                 <li>
-                    <a href="mailto:hello@mocogeeks.com" class="btn-floating green darken-1 tooltipped" data-position="top" data-delay="50"
-                        data-tooltip="Email"><i class="material-icons">email</i></a>
+                    <a href="mailto:hello@mocogeeks.com" class="btn-floating green darken-1 tooltipped" data-position="top" data-delay="50" data-tooltip="Email"><i class="material-icons">email</i></a>
                 </li>
                 <li>
-                    <a href="https://geeksclub.slack.com" class="btn-floating blue tooltipped" data-position="top" data-delay="50"
-                        data-tooltip="Login"><i class="material-icons">supervisor_account</i></a>
+                    <a href="https://geeksclub.slack.com" class="btn-floating blue tooltipped" data-position="top" data-delay="50" data-tooltip="Login"><i class="material-icons">supervisor_account</i></a>
                 </li>
             </ul>
         </div>
@@ -80,9 +77,11 @@
                     <div class="card notice">
                         <div class="card-content">
                             <span class="card-title"><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;Notice</span>
-                            <p>Next Wootton Beta program meeting time <b>Mar. 6, 2017 at 7:00PM</b> on <b>Discord</b> - Code Hour!</p>
-                            <p>Next Blair Beta program meeting time <b>TBD</b> on <b>TBD</b></p>
-                            <p>Next officer meeting time <b>TBD</b> on <b>TBD</b></p>
+                            <div id="api-fetch">
+                                <p id="api-fetch-beta" style="display: none">Next Beta program meeting time <b><span id="api-date-beta"></span> at <span id="api-time-beta"></span></b>                                    in <b><span id="api-loc-beta"></span></b> - <span id="api-des-beta"></span></p>
+                                <p id="api-fetch-wootton" style="display: none">Next Wootton meeting time <b><span id="api-date-wootton"></span> at <span id="api-time-wootton"></span></b>                                    in <b><span id="api-loc-wootton"></span></b> - <span id="api-des-wootton"></span></p>
+                                <p id="api-fetch-blair" style="display: none">Next Blair meeting time <b><span id="api-date-blair"></span> at <span id="api-time-blair"></span></b>                                    in <b><span id="api-loc-blair"></span></b> - <span id="api-des-blair"></span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -213,6 +212,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://use.fontawesome.com/c0addf9573.js"></script>
+    <script src="https://cdn.rawgit.com/mdhack/apis/master/hackapi.js"></script>
     <script type="text/javascript" src="assets/main.js"></script>
 </body>
 
