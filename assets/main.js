@@ -1,10 +1,12 @@
 
-var apiURL = "https://api.mocogeeks.com/apis/meetTime.json";
+var timeAPI = "https://api.mocogeeks.com/apis/meetTime.json";
+
+var hackerAPI = "https://api.mocogeeks.com/apis/hackerCount.jsodn";
 
 $(document).ready(function () {
   $('.tooltipped').tooltip({ delay: 50 });
   $(".button-collapse").sideNav();
-  hackApi(apiURL, function (error, data) {
+  hackApi(timeAPI, function (error, data) {
     if (error) {
       document.getElementById("api-fetch").innerHTML = "Failed to fetch next meeting data.";
       console.log('Error found while trying to fetch HackAPI.', error);
@@ -40,6 +42,19 @@ $(document).ready(function () {
       document.getElementById("api-fetch-wootton").style.display = "";
       document.getElementById("api-fetch-blair").style.display = "";
     }
+  });
+  hackApi(hackerAPI, function (error, data) {
+    if (error) {
+      document.getElementById("api-fetch-hackerCount").innerHTML = "?";
+      document.getElementById("api-fetch-hackerDes").innerHTML = "Mmm... There's gotta be something wrong with our data... Wanna help fixing it?";
+
+      console.log('Error found while trying to fetch HackAPI.', error);
+    } else {
+      var hackerTotal = data.wootton.officer + data.wootton.hacker + data.blair.officer + data.blair.hacker;
+      document.getElementById("api-fetch-hackerCount").innerHTML = hackerTotal;
+
+    }
+    document.getElementById("api-fetch-hacker").style.display = "";
   });
 });
 
