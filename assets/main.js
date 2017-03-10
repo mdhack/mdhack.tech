@@ -1,7 +1,7 @@
 
 var timeAPI = "https://api.mocogeeks.com/apis/meetTime.json";
 
-var hackerAPI = "https://api.mocogeeks.com/apis/hackerCount.jsodn";
+var hackerAPI = "https://api.mocogeeks.com/apis/hackerCount.json";
 
 $(document).ready(function () {
   $('.tooltipped').tooltip({ delay: 50 });
