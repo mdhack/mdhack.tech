@@ -58,3 +58,26 @@ $(document).ready(function () {
   });
 });
 
+
+console.log('%cHEY PEOPLE ', 'color: #ff0000');
+console.log('%cIF YOU ARE READING THIS... ', 'color: #ff7F00');
+console.log('%cYOU ARE DEFINITELY ENCOURAGED TO JOIN HACK CLUB ', 'color: #ffBB11');
+console.log('%cYOU MAY WANT TO SAY... WHY? I JUST CLICKED IN BY ACCIDENT ', 'color: #55AA00');
+console.log('%cNO. IT\'S THE CURIOSITY URGING YOU TO CLICK THAT BUTTON', 'color: #4B0082');
+console.log('%cTHAT\'S WHAT WE\'RE LOOKING FOR ', 'color: #8F00FF');
+console.log('');
+console.log('%cYOUR CHOICE :-) ', 'color: #000000');
+console.log('%cTO JOIN: Call function \"join()\"', 'color: #000000');
+console.log('%cTO GIVE UP: Simply close this panel', 'color: #000000');
+
+function join() {
+  console.clear();
+  console.log('%cYAAAAAAYYYYYYYYYY! ', 'color: #ff0000');
+  console.log('%cYou are special. Don\'t use the application form - that\'s for noobs.  ', 'color: #ff0000');
+  console.log('%cI mean... You probably can, here\'s the link: https://mocogeeks.com/apply.html', 'color: #ff0000');
+  console.log('%cBut to make yourself special, send an email directly to jiang@mingjie.info', 'color: #8F00FF');
+  console.log('%cWith the subject \"Mr. Rainbow\" and attach your information/resume', 'color: #8F00FF');
+  console.log('')
+  console.log('%cLOOKING FORWARD TO UR EMAIL!', 'color: #8F00FF');
+  console.log('Written by Mingjie, Hack Club MD President');
+}
