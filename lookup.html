@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- Starts Compiled CSS File -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+    <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <title>Hack Club MD | Code. Share. Lead.</title>
+
+    <style>
+        .theme {
+            background-color: #d32f2f!important;
+        }
+        
+        .theme-2 {
+            background-color: #c62828!important;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- Starts NavBar -->
+        <nav class="nav-extended theme-2 animated slideInDown">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">Hack Club MD</a>
+                <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="https://blog.mocogeeks.com/">Blog</a></li>
+                    <li class="active"><a href="apply.html">Apply Now</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-menu">
+                    <li><a href="https://blog.mocogeeks.com/">Blog</a></li>
+                    <li class="active"><a href="apply.html">Apply Now</a></li>
+                </ul>
+            </div>
+            <div class="nav-content theme">
+                <div class="wrapper">
+                    <div class="hero-text">
+                        <h1 style="line-height: 80%">Hacker Lookup <sub>β</sub></h1>
+                        <p>Need to find someone? Use this.</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="page-content animated slideInUp">
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab col s3"><a class="active" href="#email-lookup">Email Lookup</a></li>
+                        <li class="tab col s3"><a href="#test2">AM I IN?</a></li>
+                    </ul>
+                </div>
+                <div id="email-lookup" class="col s12">
+                    <div class="card">
+                        <div class="card-content" style="text-align: center">
+                            <span class="card-title">Email Lookup System <sub>β</sub></span>
+                            <p>For communication purposes only.</p>
+
+                            <div class="row">
+                                <div class="col s12 s6">
+                                    Lookup the email address of
+                                    <div class="input-field inline">
+                                        <select id="branch">
+                                    <option value="" disabled selected>Select a Branch</option>
+                                    <option value="wootton">Wootton</option>
+                                    <option value="blair">Blair</option>
+                                </select>
+                                    </div>
+                                    <div class="input-field inline">
+                                        <select id="position">
+                                    <option value="" disabled selected>Select a Position</option>
+                                    <option value="officer">Officer</option>
+                                    <option value="hacker">Hacker</option>
+                                </select>
+                                    </div>
+                                    <div class="input-field inline">
+                                        <input id="first_name" type="text">
+                                        <label for="first_name">First Name</label>
+                                    </div>
+                                    &nbsp;
+                                    <div class="input-field inline">
+                                        <input id="last_name" type="text">
+                                        <label for="last_name">Last Name</label>
+                                    </div>
+                                </div>
+                                <div class="col s12 s6">
+                                    <button class="btn waves-effect waves-light red" type="submit" name="action" id="submit-lookup">Retrieve
+                                <i class="material-icons right">send</i>
+                            </button>
+                                    <div class="input-field inline">
+                                        <input id="retrieved" type="text" placeholder="&emsp;&emsp;">
+                                    </div>
+                                </div>
+                            </div>
+                            <code id="json-string"></code>
+                        </div>
+                    </div>
+                </div>
+                <div id="test2" class="col s12">
+                    <div class="card">
+                        <div class="card-content" style="text-align: center">
+                            <span class="card-title">Am I In?</span>
+                            <span>Coming soon...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Starts Footer -->
+    <footer class="page-footer theme animated slideInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Hack Club MD HQ (Wootton)</h5>
+                    <p class="grey-text text-lighten-4">2100 Wootton Parkway<br />Rockville, MD</p>
+                    <hr style="border-color:#e1e1e1">
+                    <div class="contact-email white-text">
+                        <a href="mailto:hello@mocogeeks.com" style="color:white"><span class="contact-email-text"><i class="material-icons">mail</i>&nbsp;<u>hello@mocogeeks.com</u></span></a>
+                    </div>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li class="footer-linktab">
+                            <a class="grey-text text-lighten-3 footer-linktab-text" href="https://github.com/mocogeeks"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+                        </li>
+                        <li class="footer-linktab">
+                            <a class="grey-text text-lighten-3 footer-linktab-text" href="https://www.facebook.com/mocogeeks/"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+                        </li>
+                        <li class="footer-linktab">
+                            <a class="grey-text text-lighten-3 footer-linktab-text" href="https://geeksclub.slack.com/"><i class="fa fa-slack" aria-hidden="true"></i> Members Login</a>
+                        </li>
+                        <li class="footer-linktab"><a class="grey-text text-lighten-3 footer-linktab-text" href="https://www.mingjie.info">Coded with <i class="fa fa-heart faa-pulse animated" aria-hidden="true"></i> by Mingjie</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                ©2017 Hack Club
+                <a class="grey-text text-lighten-4 right" href="https://hackclub.com">Hack Club</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Starts Compiled JavaScript File -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="https://use.fontawesome.com/c0addf9573.js"></script>
+    <script src="https://cdn.rawgit.com/mdhack/apis/master/hackapi.js"></script>
+    <script type="text/javascript" src="assets/main.js"></script>
+</body>
+
+</html>

@@ -1,11 +1,15 @@
 
 var timeAPI = "https://api.mocogeeks.com/apis/meetTime.json";
 
-var hackerAPI = "https://api.mocogeeks.com/apis/hackerCount.json";
+var hlAPI = "https://api.mocogeeks.com/apis/hackerList.json";
+
+var hackList = "";
 
 $(document).ready(function () {
+  $('select').material_select();
   $('.tooltipped').tooltip({ delay: 50 });
   $(".button-collapse").sideNav();
+  $('ul.tabs').tabs();
   hackApi(timeAPI, function (error, data) {
     if (error) {
       document.getElementById("api-fetch").innerHTML = "Failed to fetch next meeting data.";
@@ -43,15 +47,23 @@ $(document).ready(function () {
       document.getElementById("api-fetch-blair").style.display = "";
     }
   });
-  hackApi(hackerAPI, function (error, data) {
+
+  hackApi(hlAPI, function (error, data) {
     if (error) {
       document.getElementById("api-fetch-hackerCount").innerHTML = "?";
       document.getElementById("api-fetch-hackerDes").innerHTML = "Mmm... There's gotta be something wrong with our data... Wanna help fixing it?";
 
       console.log('Error found while trying to fetch HackAPI.', error);
     } else {
-      var hackerTotal = data.wootton.officer + data.wootton.hacker + data.blair.officer + data.blair.hacker;
-      document.getElementById("api-fetch-hackerCount").innerHTML = hackerTotal;
+      hacklist = data;
+
+      var count_wootton_hacker = Object.keys(data.wootton.hacker).length;
+      var count_wootton_officer = Object.keys(data.wootton.officer).length;
+
+      var count_blair_hacker = Object.keys(data.blair.hacker).length;
+      var count_blair_officer = Object.keys(data.blair.officer).length;
+
+      document.getElementById("api-fetch-hackerCount").innerHTML = count_wootton_hacker + count_wootton_officer + count_blair_hacker + count_blair_officer;
 
     }
     document.getElementById("api-fetch-hacker").style.display = "";
@@ -80,4 +92,36 @@ function join() {
   console.log('')
   console.log('%cLOOKING FORWARD TO UR EMAIL!', 'color: #8F00FF');
   console.log('Written by Mingjie, Hack Club MD President');
+}
+
+var elem = document.querySelector("#submit-lookup");
+
+elem.addEventListener("click", function onclick(event) {
+  lookup_init()
+});
+
+function lookup_init() {
+  var fn = document.getElementById('first_name').value;
+  var ln = document.getElementById('last_name').value;
+  var br = document.getElementById('branch').value;
+  var pos = document.getElementById('position').value;
+
+  hackApi(hlAPI, function (error, data) {
+    if (error) {
+      document.getElementById('retrieved').value = "Does Not Exist";
+    } else {
+      document.getElementById('retrieved').value = data[br][pos][fn][ln].email;
+      document.getElementById('json-string').innerHTML = JSON.stringify(data[br][pos][fn][ln]);
+
+      if (data.wootton.officer[fn][ln].sex == 0)
+        document.querySelector("#submit-lookup").innerHTML = "Email Him<i class=\"material-icons right\">email</i>"
+      else if (data.wootton.officer[fn][ln].sex == 1)
+        document.querySelector("#submit-lookup").innerHTML = "Email Her<i class=\"material-icons right\">email</i>"
+      else
+        document.querySelector("#submit-lookup").innerHTML = "Email<i class=\"material-icons right\">email</i>"
+        document.querySelector("#submit-lookup").addEventListener("click", function onclick(event) {
+          window.location = "mailto:" + data.wootton.officer[fn][ln].email;
+        });
+    }
+  });
 }
