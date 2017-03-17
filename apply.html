@@ -14,6 +14,26 @@
 </head>
 
 <body>
+
+    <div style="z-index: 200000000; position: fixed;">
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Blair <strong>Only</strong> for now.</h4>
+                <p>Thanks for your interest for MD Hack Club! Due to the relatively large amount of applications we are handling
+                    right now, we will pause our approval process for Wootton branch until the SGA approval of our club.
+                </p>
+                <p>At that time, we'll continue to review applications. For now, you don't need to take any action - we'll email
+                    you back before mid-May. </p>
+                <p>If you have any further concerns, feel free to email Wootton branch president: <a href="mailto:jiang@mingjie.info">jiang@mingjie.info</a></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-light btn-flat">Proceed With Blair</a>
+                <a href="index.html" class=" modal-action waves-effect waves-light btn-flat">Return Home</a>
+            </div>
+        </div>
+    </div>
+
+    </div>
     <main>
         <!-- Starts NavBar -->
         <nav class="nav-extended theme-2  animated slideInDown">
@@ -138,8 +158,20 @@
         </div>
     </footer>
     <!-- Starts Compiled JavaScript File -->
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal({
+                    dismissible: false,
+                    opacity: 0.95
+                }
+            );
+            $('#modal1').modal('open');
+        });
+    </script>
     <script src="https://use.fontawesome.com/c0addf9573.js"></script>
     <script type="text/javascript" src="assets/main.js"></script>
 </body>
