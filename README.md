@@ -1,5 +1,5 @@
-# Geeks Club Website
-MoCoGeeks Website Landing Page
+# MD Hack Club
+MD Hack Club Website
 This is the website of MD Hack Club created by [Mingjie](https://www.mingjie.info).
 
 Hope you didn't see anything wrong.
