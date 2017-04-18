@@ -1592,3 +1592,17 @@
 		body.is-loading #footer {
 			opacity: 0;
 		}
+
+article {
+	overflow-y: scroll;
+	max-height: 90vh;
+	
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+body {
+	overflow-y: hidden;
+}
