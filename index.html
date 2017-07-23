@@ -22,12 +22,22 @@
     <!-- Lazy people start with a pre-built CSS framework. That's what I do -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
     <title>Wootton Hack Club</title>
 
     <!-- Not much CSS needed. Might as well keep them here -->
     <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
         .hero.is-danger,
-        .button.is-danger {
+        .button.is-danger,
+        body {
             background-color: #E42D40;
         }
     </style>
@@ -58,7 +68,7 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar animated slideInDown">
         <div class="navbar-brand">
             <a href="/" class="navbar-item">
                 <img src="https://cdn.rawgit.com/hackclub/hackclub/1a1b9a06/internals/logos/hack_club_red_text.svg" width="112" height="28">
@@ -72,13 +82,44 @@
     <!-- Top: You need a catchy hero part -->
     <section class="hero is-danger is-medium">
         <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-                    ""
-                </h1>
-                <h2 class="subtitle">
-                    Full Height subtitle
-                </h2>
+            <div class="columns">
+                <div class="container column is-3">
+                    <img style="padding: 20px" class="is-pulled-right animated fadeInUp" src="https://cdn.rawgit.com/hackclub/hackclub/e49d50df/internals/logos/hack_club_letter.svg"
+                        width="144">
+                </div>
+                <div class="container column is-6 animated fadeInDown">
+                    <h1 class="title" style="margin-bottom: 0">
+                        Replicate the hacker culture & redefine hack!
+                    </h1>
+                    <p>-- Wootton Hack Club Mission Statement 2017-18</p>
+                    <hr>
+                    <h2 class="subtitle">
+                        Welcome back, hackers / Welcome, new hackers!
+                    </h2>
+                    <a class="button is-danger is-medium is-inverted is-outlined animated fadeInUp" href="https://fair.mdhack.tech/">Join the Club!</a>
+                </div>
+                <div class="column is-1">
+                    <!-- Placeholder & Aligner-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Middle: Club Activities -->
+    <section class="hero is-light is-medium">
+        <div class="hero-body" style="padding: 44px;">
+            <div class="container has-text-centered">
+                <h1 class="title">What we offer at Wootton Hack Club</h1>
+            </div>
+
+            <div class="columns">
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <p>Test</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
