@@ -1,291 +1,336 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<!-- 
+    Rewritten for the 2017-18 school year, also as a demo of the summer project
+    I'm going to prove that with enough practice, a successful project can be 
+    done with less than 3 hours of work. 
+
+    I'm also trying my best to write a website without any JavaScript.
+
+    Let's start.
+
+    -Mingjie Jiang (@mj66)
+-->
+
+
+
 <html>
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
-	
-	<!-- Favicon Configuration -->
-	<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-	<link rel="manifest" href="icons/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+    <!-- Classis responsive viewport declaration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- COMMON TAGS -->
-	<meta charset="utf-8">
-	<title>Wootton Hack Club</title>
-	<!-- Search Engine -->
-	<meta name="description" content="Replicate the Hacker Culture & Redefine Hack!">
-	<meta name="image" content="http://mdhack.tech/images/thumbs.png">
-	<!-- Schema.org for Google -->
-	<meta itemprop="name" content="Wootton Hack Club">
-	<meta itemprop="description" content="Replicate the Hacker Culture & Redefine Hack!">
-	<meta itemprop="image" content="http://mdhack.tech/images/thumbs.png">
-	<!-- Twitter -->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Wootton Hack Club">
-	<meta name="twitter:description" content="Replicate the Hacker Culture & Redefine Hack!">
-	<meta name="twitter:site" content="@mdhackclub">
-	<meta name="twitter:image:src" content="http://mdhack.tech/images/thumbs.png">
-	<!-- Open Graph general (Facebook, Pinterest & Google+) -->
-	<meta name="og:title" content="Wootton Hack Club">
-	<meta name="og:description" content="Replicate the Hacker Culture & Redefine Hack!">
-	<meta name="og:image" content="http://mdhack.tech/images/thumbs.png">
-	<meta name="og:url" content="https://mdhack.tech">
-	<meta name="og:site_name" content="Wootton Hack Club">
-	<meta name="fb:admins" content="1872001393056521">
-	<meta name="og:type" content="website">
+    <!-- Lazy people start with a pre-built CSS framework. That's what I do -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <title>Wootton Hack Club</title>
+
+    <!-- Not much CSS needed. Might as well keep them here -->
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .hero.is-danger,
+        .button.is-danger,
+        .navbar,
+        body {
+            background-color: #E42D40;
+        }
+
+        .navbar code {
+            color: #fff;
+        }
+    </style>
+
+    <!-- Favicon configurations... Ignore these if you are a beginner-->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="icons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="icons/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="icons/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="icons/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="icons/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="icons/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="icons/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="icons/mstile-310x310.png" />
+
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="navbar is-transparent animated slideInDown" style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000;">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item">
+                <img src="sponsors/hcw.svg" width="112" height="28">
+            </a>
+            <div class="navbar-item">
+                <code style="background-color: transparent;">// Wootton High School</code>
+            </div>
+        </div>
+    </nav>
+    <main style="padding-top: 3.25rem">
+        <!-- Top: You need a catchy hero part -->
+        <section class="hero is-danger is-medium">
+            <div class="hero-body">
+                <div class="columns">
+                    <div class="column is-1 is-hidden-touch">
+                        <!-- Placeholder & Aligner-->
+                    </div>
+                    <div class="container column is-10 animated">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+                        <div class="animated fadeInDown">
+                            <h1 class="title is-1" style="margin-bottom: 0">
+                                Wootton Hack Club
+                            </h1>
+                            <h1 class="title is-4" style="margin-bottom: 0">
+                                Replicate the hacker culture & redefine hack!
+                            </h1>
 
-		<!-- Header -->
-		<header id="header">
-			<div class="logo" style="border-radius: 4px;">
-				<img src="images/thumbs.png" style="width:100%; height: 100%; border-radius: 4px;">
-			</div>
-			<div class="content">
-				<div class="inner">
-					<h1>Wootton Hack Club</h1>
-					<p>Replicate the Hacker Culture & Redefine Hack!</p>
+                            <p>Wootton Hack Club Mission Statement 2017-18</p>
+                            <hr>
 
-				</div>
-			</div>
-			<nav>
-				<ul>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="#apply">Apply</a></li>
-					<li><a href="#ctf">CTF</a></li>
-					<li><a href="#showcase">Showcase</a></li>
-				</ul>
-			</nav>
-		</header>
+                            <div class="notification is-light">
+                                Next meeting will be: <strong><span id="meeting-date">TBD</span></strong>&nbsp;after school.
+                                Topic: <strong><span id="meeting-topic">Intro + Free Form Hacking</span></strong>.
+                            </div>
+                            <a class="button is-danger is-medium is-inverted is-outlined animated fadeInUp" href="https://fair.mdhack.tech/">Join the Club!</a>                            &emsp;
+                            <a class="button is-danger is-medium is-inverted is-outlined animated fadeInUp" href="https://shipit.hackclub.com/">Ship Your Project!</a>
 
-		<!-- Main -->
-		<div id="main">
+                        </div>
+                    </div>
+                    <div class="column is-1 is-hidden-touch">
+                        <!-- Placeholder & Aligner-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Middle: Club Overview -->
+        <section class="hero is-light is-medium">
 
-			<!-- About -->
-			<article id="about">
-				<h2 class="major">About</h2>
-				<h3>Who are we?</h3>
-				<p>Wootton Hack Club is a new club at Wootton High School under SGA review. Members will explore topics in different computer
-					science fields such as game development, algorithms, open source software or other smaller code snippets. They will
-					learn and communicate in order to freely create their own projects, and conduct researches related to the computer engineering
-					field.
-				</p>
-				<h3>Mingjie Jiang | President</h3>
-				<p>
-					<b>Programming</b>&emsp;&emsp;HTML / CSS / JavaScript / Java / Linux Shell<br />
-				</p>
+            <div class="hero-body" style="padding: 44px;">
 
-				<h3>Matthew Yu | Vice President</h3>
-				<p>
-					<b>Programming</b>&emsp;&emsp;C++<br />
-				</p>
+                <div class="container has-text-centered">
+                    <p><i class="fa fa-handshake-o fa-4x" aria-hidden="true"></i></p>
+                    <h1 class="title is-2"><strong>How We Work</strong></h1>
+                </div>
+                <hr>
+                <div class="columns has-text-centered">
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="title" style="margin-bottom: 0"><i class="fa fa-question-circle-o" aria-hidden="true"></i></p>
+                                <p class="title is-4">Who are we?</p>
+                                <p>Wootton Hack Club is a new club starting in 2017 at Wootton High School. Members will explore
+                                    topics in different computer science fields such as game development, algorithms, open
+                                    source software or other smaller code snippets. They will learn and communicate in order
+                                    to freely create their own projects, and conduct researches related to the computer engineering
+                                    field.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="title" style="margin-bottom: 0"><i class="fa fa-user-plus" aria-hidden="true"></i></p>
+                                <p class="title is-4">Who can join?</p>
+                                <p>Anyone! We will provide a free community for software developers and programmers to share
+                                    their experiences and launch projects to collaborate, but we will also be a place for
+                                    new programmers to get help from higher leveled ones. You will also have the opportunity
+                                    to meet with some professional speakers working in the computer science field to further
+                                    extend your knowledge.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="title" style="margin-bottom: 0"><i class="fa fa-gavel" aria-hidden="true"></i></p>
+                                <p class="title is-4">Are we competitive?</p>
+                                <p>Initially we were not at all interested in competitive programming. But this year we've decided
+                                    to participate in CTF (Capture-The-Flag) online cybersecurity games to compete against
+                                    other teams from other schools. Advanced knowledge in computer science, including the
+                                    ability to code in different common languages, is required. If you are interested in
+                                    participating, please contact Mingjie.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-				<h3>Larissa Tsai | Secretary</h3>
-				<p>
-					<b>Programming</b>&emsp;Python / Java
-				</p>
+        <!-- Middle Bottom: Team -->
+        <section class="hero is-light is-medium">
+            <div class="hero-body" style="padding: 44px;">
+                <div class="container has-text-centered">
+                    <p><i class="fa fa-group fa-4x" aria-hidden="true"></i></p>
+                    <h1 class="title is-2"><strong>Our Team</strong></h1>
+                </div>
+                <hr>
+                <div class="columns">
+                    <div class="column is-one-fourth">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-square">
+                                    <img src="team/mingjie.png" alt="Mingjie Jiang">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="title is-4" style="margin-bottom: 0">Mingjie Jiang</h1>
+                                    <small>Club Leader</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-fourth">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-square">
+                                    <img src="http://bulma.io/images/placeholders/480x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="title is-4" style="margin-bottom: 0">Matthew Yu</h1>
+                                    <small>Club Co-Leader</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-fourth">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-square">
+                                    <img src="http://bulma.io/images/placeholders/480x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="title is-4" style="margin-bottom: 0">Larissa Tsai</h1>
+                                    <small>Club Secretary</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-fourth">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-square">
+                                    <img src="http://bulma.io/images/placeholders/480x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="title is-4" style="margin-bottom: 0">Aman Thanvi</h1>
+                                    <small>Public Relations Officer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-				<h3>Aman Thanvi | Public Relations</h3>
-				<p>
-					<b>Programming</b>&emsp;Java
-				</p>
-				<h3>Mission Statement</h3>
-				<p>Replicate the hacker culture & redefine hack!</p>
+        <section>
+            <div class="hero is-light">
+                <div class="hero-body" style="padding: 44px;">
+                    <div class="container has-text-centered">
+                        <p><i class="fa fa-ticket fa-4x" aria-hidden="true"></i></p>
+                        <h1 class="title is-2"><strong>Our Sponsors</strong></h1>
+                    </div>
+                    <br>
+                    <div class="columns has-text-centered">
+                        <div class="column is-one-fourth">
+                            <a href="https://m.do.co/c/463298e5df07">
+                                <img src="sponsors/do.png" style="width: 270px;">
+                            </a>
+                        </div>
 
-				<h3>Who can join?</h3>
-				<p>Anyone! We will provide a free community for software developers and programmers to share their experiences and launch
-					projects to collaborate, but we will also be a place for new programmers to get help from higher leveled ones.
-				</p>
+                        <div class="column is-half">
+                            <a href="https://hackclub.com">
+                                <img src="sponsors/hc.svg" style="width: 200px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="columns has-text-centered">
+                        <div class="column is-half">
+                            <a href="https://jetbrains.com">
+                                <img src="sponsors/jetbrains.svg" style="width: 120px;">
+                            </a>
+                        </div>
 
-				<h3>Competitions?</h3>
-				<p>Not really interested. We'll leave the challenges for the CCC. However, we will have a small group of people competiting
-					in online hacking competitions like CTFs. Talk to Mingjie if you are interested.
-				</p>
+                        <div class="column is-one-fourth">
+                            <a href="https://notion.so">
+                                <img src="sponsors/notion.png" style="width: 150px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to action button -->
+        <section>
+            <div class="hero is-danger is-small">
+                <div class="hero-body has-text-centered" style="padding: 44px;">
+                    <h1 class="title" style="margin-bottom:0">Questions?</h1>
+                    <h1 class="title is-5" style="margin-bottom:0">Shoot an email to <a href="mailto:hello@mdhack.tech">hello@mdhack.tech</a> and we'll respond ASAP!</h1>
+                    <p><small>Sponsorship, events and other business-related inquries, please send emails to <a href="mailto:event@mdhack.tech">event@mdhack.tech</a></small></p>
+                </div>
+            </div>
+            <!--<div class="hero is-light is-small">
+                <div class="hero-body has-text-centered" style="padding: 44px;">
+                    <a class="button is-danger is-large" href="https://fair.mdhack.tech/">Join the Club!</a>
 
-				<h3>Other Information</h3>
-				<p><strong>Staff Sponsor</strong>&emsp;Ms. Barbara Silcox</p>
+                    <p><small>And receive sponsored perks to kickstart your projects!</small></p>
+                </div>
+            </div>-->
+        </section>
 
-				<h3>Proudly Sponsored by</h3>
-				<a href="https://hackclub.com">
-					<img src="https://cdn.rawgit.com/hackclub/meta/master/logos/hack_club_full_white.svg">
-					<p>Hack Club<br />San Francisco, CA</p>
-				</a>
+        <!-- Social -->
+        <section>
+            <div class="hero is-danger is-small">
+                <div class="hero-body has-text-centered" style="padding: 10px;">
+                    <p>Follow us on social media! @MDHackClub</p>
+                    <p>
+                        <a href="https://facebook.com/mdhackclub">
+                            <i class="fa fa-facebook fa-1x"></i>
+                        </a>
+                        &emsp;
+                        <a href="https://twitter.com/mdhackclub">
+                            <i class="fa fa-twitter fa-1x"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
 
-				<h3>We appreciate the following companies that provided help...</h3>
-				<a href="https://m.do.co/c/463298e5df07">
-					<img src="https://www.digitalocean.com/assets/media/logos-badges/png/DO_Logo_Horizontal_White-06a0cebe.png" width="270">
-					<p>DigitalOcean<br />New York City, NY</p>
-				</a><br />
-				<a href="https://www.jetbrains.com">
-					<img src="https://cdn.rawgit.com/mdhack/mdhack.tech/9bd208f1/images/jetbrains.svg" width="120">
-					<p>JetBrains<br />Czech Republic</p>
-				</a>
-				<a href="https://www.notion.so">
-					<img src="images/notion.png" width="120">
-					<p>Notion<br />San Francisco, CA</p>
-				</a><br />
-			</article>
 
-			<!-- Contact -->
-			<article id="contact">
-				<h2 class="major">Contact</h2>
-				<h3>Have a question?</h3>
-				<p>Throw it at us! Simply email <a href="mailto:hello@mdhack.tech">hello@mdhack.tech</a> and we'll try our best to respond!</p>
-				<ul class="icons">
-					<li><a href="https://twitter.com/MDHackClub" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="https://www.facebook.com/mdhackclub" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="https://github.com/mdhack" class="icon fa-github"><span class="label">GitHub</span></a></li>
-				</ul>
-			</article>
-
-			<!-- Application -->
-			<article id="apply">
-				<h2 class="major">Submit Application</h2>
-				<p>So you've decided to join? Awesome.</p>
-				<form action='https://www.getform.org/f/d00d3887-42c4-4d0a-9f97-b58bafb6ab80' method="POST">
-					<div class="field half first">
-						<label for="app-name">Name</label>
-						<input type="text" name="name" id="app-name" value="" placeholder="John Doe" />
-					</div>
-					<div class="field half">
-						<label for="app-email">Email</label>
-						<input type="email" name="email-address" id="app-email" value="" placeholder="me@example.com" />
-					</div>
-					<div class="field half first">
-						<label for="app-school">School</label>
-						<input type="text" name="school" id="app-school" value="" placeholder="My High School" />
-					</div>
-					<div class="field half">
-						<label for="app-grade">Grade</label>
-						<div class="select-wrapper">
-							<select name="grade" id="app-grade">
-													<option value="">-</option>
-													<option value="8">8th</option>
-													<option value="9">9th</option>
-													<option value="10">10th</option>
-													<option value="11">11th</option>
-							</select>
-						</div>
-					</div>
-					<p>Please tell us about an interesting project, preferably outside of class, that you created or worked on.<br />This is
-						something that we use to evaluate your ability to "hack". If you do have some projects that you are proud of, make
-						sure you attach the link to it (GitHub, project webapp link, project wiki/documentation, etc.)</p>
-					<div class="field">
-						<textarea name="experience" id="app-experience" placeholder="I've worked on..." rows="6"></textarea>
-					</div>
-					<p>Do you have a resume? You can send us the link here, or email to <a href="mailto:application@mdhack.tech">application@mdhack.tech</a>.
-					</p>
-					<ul class="actions">
-						<li><input type="submit" value="Submit" class="special" /></li>
-						<li><input type="reset" value="Reset" /></li>
-					</ul>
-				</form>
-			</article>
-
-			<article id="success">
-				<h2 class="major">Nice!</h2>
-				<p>Great! We've successfully submitted your application. Our team will be in contact with you in the next 3 days via email.
-				</p>
-				<p>If you have any other questions, feel free to email: <a href="mailto:hello@mdhack.tech">hello@mdhack.tech</a></p>
-			</article>
-
-			<!-- Intro -->
-			<article id="ctf">
-				<h2 class="major">CTF Team</h2>
-				<h3>What is CTF?</h3>
-				<p>Capture the Flag (CTF) is a special kind of information security competitions. There are three common types of CTFs:
-					Jeopardy, Attack-Defence and mixed. Jeopardy-style CTFs has a couple of questions (tasks) in range of categories. For
-					example, Web, Forensic, Crypto, Binary or something else. <span style="font-size: 75%">(Adapted from <a href="https://ctftime.org/ctf-wtf/">CTFtime</a>)</span></p>
-
-				<p>Visit our <a href="https://ctf.mdhack.tech">practice problems database</a>.</p>
-
-				<h3>Team I (Competitive)</h3>
-				<p><a href="https://ctftime.org/team/36082">View competition log</a></p>
-				<ul class="alt">
-					<li>Captain: Mingjie J.</li>
-					<li>Sean H.</li>
-					<li>Benjamin M.</li>
-					<li>Eshaan M.</li>
-					<li>Konstantin T.</li>
-				</ul>
-
-				<h3>Team II (Training)</h3>
-				<p><a href="https://ctftime.org/team/38068">View competition log</a></p>
-				<ul class="alt">
-					<li>Captain: Larissa T.</li>
-					<li>Timothy D.</li>
-					<li>Albert T.</li>
-					<li>Shrikar V.</li>
-					<li>Shiteng W.</li>
-				</ul>
-			</article>
-
-			<!-- Intro -->
-			<article id="showcase">
-				<h2 class="major">Showcase</h2>
-				<h3>Gallery will be open in September.</h3>
-				<p>Our members are actively working on the individual and group projects. They will be available in September until October.</p>
-
-				<h3>Got an idea?</h3>
-				<p>We'll help you achieve it! Join Wootton Hack Club to receive exclusive free credits and services to power up your project!
-					Fill out <a href="#apply">this form</a> to start.</p>
-			</article>
-
-			<article id="404">
-				<h2 class="major">Page Not Found</h2>
-				<h3>Error 404: Broken link?</h3>
-				<p>There are no pages on our website... All links should be in the form of https://mdhack.tech/#content. Try again? Or close
-					this window to go back home.</p>
-			</article>
-
-		</div>
-
-		<!-- Footer -->
-		<footer id="footer">
-			<div style="opacity: 0.6">
-				<span class="copyright">Sponsored by</span>
-				<a href="https://hackclub.com">
-					<img src="https://cdn.rawgit.com/hackclub/meta/master/logos/hack_club_full_white.svg" height="8"></a>					
-			</div>
-			<p class="copyright">&copy; 2017 Wootton Hack Club | <a href="https://www.mingjie.info">Mingjie Jiang</a></p>
-		</footer>
-
-	</div>
-
-	<!-- BG -->
-	<div id="bg"></div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
+        <section>
+            <div class="hero is-danger is-small">
+                <div class="hero-body has-text-centered" style="padding: 10px;">
+                    <p><small>A <strong><a href="https://www.mingjie.info">ΜIΠGJIΞ</a></strong> Website</small></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://use.fontawesome.com/41132a62d5.js"></script>
 </body>
 
 </html>
