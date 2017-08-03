@@ -37,8 +37,13 @@
 
         .hero.is-danger,
         .button.is-danger,
+        .navbar,
         body {
             background-color: #E42D40;
+        }
+
+        .navbar code {
+            color: #fff;
         }
     </style>
 
@@ -68,62 +73,264 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar animated slideInDown">
+    <nav class="navbar is-transparent animated slideInDown" style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000;">
         <div class="navbar-brand">
             <a href="/" class="navbar-item">
-                <img src="https://cdn.rawgit.com/hackclub/hackclub/1a1b9a06/internals/logos/hack_club_red_text.svg" width="112" height="28">
+                <img src="sponsors/hcw.svg" width="112" height="28">
             </a>
             <div class="navbar-item">
                 <code style="background-color: transparent;">// Wootton High School</code>
             </div>
         </div>
     </nav>
+    <main style="padding-top: 3.25rem">
+        <!-- Top: You need a catchy hero part -->
+        <section class="hero is-danger is-medium">
+            <div class="hero-body">
+                <div class="columns">
+                    <div class="column is-1 is-hidden-touch">
+                        <!-- Placeholder & Aligner-->
+                    </div>
+                    <div class="container column is-10 animated">
 
-    <!-- Top: You need a catchy hero part -->
-    <section class="hero is-danger is-medium">
-        <div class="hero-body">
-            <div class="columns">
-                <div class="container column is-3">
-                    <img style="padding: 20px" class="is-pulled-right animated fadeInUp" src="https://cdn.rawgit.com/hackclub/hackclub/e49d50df/internals/logos/hack_club_letter.svg"
-                        width="144">
-                </div>
-                <div class="container column is-6 animated fadeInDown">
-                    <h1 class="title" style="margin-bottom: 0">
-                        Replicate the hacker culture & redefine hack!
-                    </h1>
-                    <p>-- Wootton Hack Club Mission Statement 2017-18</p>
-                    <hr>
-                    <h2 class="subtitle">
-                        Welcome back, hackers / Welcome, new hackers!
-                    </h2>
-                    <a class="button is-danger is-medium is-inverted is-outlined animated fadeInUp" href="https://fair.mdhack.tech/">Join the Club!</a>
-                </div>
-                <div class="column is-1">
-                    <!-- Placeholder & Aligner-->
+                        <div class="animated fadeInDown">
+                            <h1 class="title is-1" style="margin-bottom: 0">
+                                Wootton Hack Club
+                            </h1>
+                            <h1 class="title is-4" style="margin-bottom: 0">
+                                Replicate the hacker culture & redefine hack!
+                            </h1>
+
+                            <p>Wootton Hack Club Mission Statement 2017-18</p>
+                            <hr>
+
+                            <div class="notification is-light">
+                                Next meeting will be: <strong><span id="meeting-date">TBD</span></strong>&nbsp;after school.
+                                Topic: <strong><span id="meeting-topic">Intro + Free Form Hacking</span></strong>.
+                            </div>
+                            <a class="button is-danger is-medium is-inverted is-outlined animated fadeInUp" href="https://fair.mdhack.tech/">Join the Club!</a>                            &emsp;
+                            <a class="button is-danger is-medium is-inverted is-outlined animated fadeInUp" href="https://shipit.hackclub.com/">Ship Your Project!</a>
+
+                        </div>
+                    </div>
+                    <div class="column is-1 is-hidden-touch">
+                        <!-- Placeholder & Aligner-->
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- Middle: Club Overview -->
+        <section class="hero is-light is-medium">
 
-    <!-- Middle: Club Activities -->
-    <section class="hero is-light is-medium">
-        <div class="hero-body" style="padding: 44px;">
-            <div class="container has-text-centered">
-                <h1 class="title">What we offer at Wootton Hack Club</h1>
-            </div>
+            <div class="hero-body" style="padding: 44px;">
 
-            <div class="columns">
-                <div class="column is-one-third">
-                    <div class="card">
-                        <div class="card-content">
-                            <p>Test</p>
+                <div class="container has-text-centered">
+                    <p><i class="fa fa-handshake-o fa-4x" aria-hidden="true"></i></p>
+                    <h1 class="title is-2"><strong>How We Work</strong></h1>
+                </div>
+                <hr>
+                <div class="columns has-text-centered">
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="title" style="margin-bottom: 0"><i class="fa fa-question-circle-o" aria-hidden="true"></i></p>
+                                <p class="title is-4">Who are we?</p>
+                                <p>Wootton Hack Club is a new club starting in 2017 at Wootton High School. Members will explore
+                                    topics in different computer science fields such as game development, algorithms, open
+                                    source software or other smaller code snippets. They will learn and communicate in order
+                                    to freely create their own projects, and conduct researches related to the computer engineering
+                                    field.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="title" style="margin-bottom: 0"><i class="fa fa-user-plus" aria-hidden="true"></i></p>
+                                <p class="title is-4">Who can join?</p>
+                                <p>Anyone! We will provide a free community for software developers and programmers to share
+                                    their experiences and launch projects to collaborate, but we will also be a place for
+                                    new programmers to get help from higher leveled ones. You will also have the opportunity
+                                    to meet with some professional speakers working in the computer science field to further
+                                    extend your knowledge.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="title" style="margin-bottom: 0"><i class="fa fa-gavel" aria-hidden="true"></i></p>
+                                <p class="title is-4">Are we competitive?</p>
+                                <p>Initially we were not at all interested in competitive programming. But this year we've decided
+                                    to participate in CTF (Capture-The-Flag) online cybersecurity games to compete against
+                                    other teams from other schools. Advanced knowledge in computer science, including the
+                                    ability to code in different common languages, is required. If you are interested in
+                                    participating, please contact Mingjie.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- Middle Bottom: Team -->
+        <section class="hero is-light is-medium">
+            <div class="hero-body" style="padding: 44px;">
+                <div class="container has-text-centered">
+                    <p><i class="fa fa-group fa-4x" aria-hidden="true"></i></p>
+                    <h1 class="title is-2"><strong>Our Team</strong></h1>
+                </div>
+                <hr>
+                <div class="columns">
+                    <div class="column is-one-fourth">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-square">
+                                    <img src="team/mingjie.png" alt="Mingjie Jiang">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="title is-4" style="margin-bottom: 0">Mingjie Jiang</h1>
+                                    <small>Club Leader</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-fourth">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-square">
+                                    <img src="http://bulma.io/images/placeholders/480x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="title is-4" style="margin-bottom: 0">Matthew Yu</h1>
+                                    <small>Club Co-Leader</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-fourth">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-square">
+                                    <img src="http://bulma.io/images/placeholders/480x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="title is-4" style="margin-bottom: 0">Larissa Tsai</h1>
+                                    <small>Club Secretary</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-fourth">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-square">
+                                    <img src="http://bulma.io/images/placeholders/480x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="title is-4" style="margin-bottom: 0">Aman Thanvi</h1>
+                                    <small>Public Relations Officer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="hero is-light">
+                <div class="hero-body" style="padding: 44px;">
+                    <div class="container has-text-centered">
+                        <p><i class="fa fa-ticket fa-4x" aria-hidden="true"></i></p>
+                        <h1 class="title is-2"><strong>Our Sponsors</strong></h1>
+                    </div>
+                    <br>
+                    <div class="columns has-text-centered">
+                        <div class="column is-one-fourth">
+                            <a href="https://m.do.co/c/463298e5df07">
+                                <img src="sponsors/do.png" style="width: 270px;">
+                            </a>
+                        </div>
+
+                        <div class="column is-half">
+                            <a href="https://hackclub.com">
+                                <img src="sponsors/hc.svg" style="width: 200px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="columns has-text-centered">
+                        <div class="column is-half">
+                            <a href="https://jetbrains.com">
+                                <img src="sponsors/jetbrains.svg" style="width: 120px;">
+                            </a>
+                        </div>
+
+                        <div class="column is-one-fourth">
+                            <a href="https://notion.so">
+                                <img src="sponsors/notion.png" style="width: 150px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to action button -->
+        <section>
+            <div class="hero is-danger is-small">
+                <div class="hero-body has-text-centered" style="padding: 44px;">
+                    <h1 class="title" style="margin-bottom:0">Questions?</h1>
+                    <h1 class="title is-5" style="margin-bottom:0">Shoot an email to <a href="mailto:hello@mdhack.tech">hello@mdhack.tech</a> and we'll respond ASAP!</h1>
+                    <p><small>Sponsorship, events and other business-related inquries, please send emails to <a href="mailto:event@mdhack.tech">event@mdhack.tech</a></small></p>
+                </div>
+            </div>
+            <!--<div class="hero is-light is-small">
+                <div class="hero-body has-text-centered" style="padding: 44px;">
+                    <a class="button is-danger is-large" href="https://fair.mdhack.tech/">Join the Club!</a>
+
+                    <p><small>And receive sponsored perks to kickstart your projects!</small></p>
+                </div>
+            </div>-->
+        </section>
+
+        <!-- Social -->
+        <section>
+            <div class="hero is-danger is-small">
+                <div class="hero-body has-text-centered" style="padding: 10px;">
+                    <p>Follow us on social media! @MDHackClub</p>
+                    <p>
+                        <a href="https://facebook.com/mdhackclub">
+                            <i class="fa fa-facebook fa-1x"></i>
+                        </a>
+                        &emsp;
+                        <a href="https://twitter.com/mdhackclub">
+                            <i class="fa fa-twitter fa-1x"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="hero is-danger is-small">
+                <div class="hero-body has-text-centered" style="padding: 10px;">
+                    <p><small>A <strong><a href="https://www.mingjie.info">ΜIΠGJIΞ</a></strong> Website</small></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://use.fontawesome.com/41132a62d5.js"></script>
 </body>
 
 </html>
