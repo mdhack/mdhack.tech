@@ -90,6 +90,16 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=535422936849147";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- Navigation -->
     <nav class="navbar is-transparent animated slideInDown" style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000;">
         <div class="navbar-brand">
@@ -349,6 +359,32 @@
                 </div>
             </div>
         </section>
+
+        <section>
+            <div class="hero is-light">
+                <div class="hero-body" style="padding: 44px;">
+                    <div class="container has-text-centered">
+                        <p><i class="fa fa-share-alt fa-4x" aria-hidden="true"></i></p>
+                        <h1 class="title is-2"><strong>Follow us!</strong></h1>
+                    </div>
+                </div>
+                <br>
+                <div class="columns">
+                    <div class="column is-half">
+                        <div class="fb-page" data-href="https://www.facebook.com/mdhackclub/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+                            data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/mdhackclub/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/mdhackclub/">Wootton Hack Club</a></blockquote>
+                        </div>
+                    </div>
+                    <div class="column is-half">
+                        <a class="twitter-timeline" href="https://twitter.com/MDHackClub">Tweets by MDHackClub</a>
+                        <script
+                            async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Call to action button -->
         <section>
             <div class="hero is-danger is-small" id="contact">
@@ -365,23 +401,6 @@
                     <p><small>And receive sponsored perks to kickstart your projects!</small></p>
                 </div>
             </div>-->
-        </section>
-
-        <!-- Social -->
-        <section>
-            <div class="hero is-danger is-small">
-                <div class="hero-body has-text-centered" style="padding: 10px;">
-                    <p>Follow us on social media! @MDHackClub</p>
-                    <p>
-                        <a href="https://facebook.com/mdhackclub">
-                            <i class="fa fa-facebook fa-1x"></i>
-                        </a> &emsp;
-                        <a href="https://twitter.com/mdhackclub">
-                            <i class="fa fa-twitter fa-1x"></i>
-                        </a>
-                    </p>
-                </div>
-            </div>
         </section>
 
 
