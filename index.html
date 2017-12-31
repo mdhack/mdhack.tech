@@ -16,58 +16,17 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <!-- Classis responsive viewport declaration -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Lazy people start with a pre-built CSS framework. That's what I do -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="assets/dist/mdhack.min.css" />
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     <title>Wootton Hack Club</title>
-
-    <!-- Not much CSS needed. Might as well keep them here -->
-    <style>
-        body {
-            font-family: 'Source Sans Pro', sans-serif;
-        }
-
-        .hero.is-danger,
-        .button.is-danger,
-        .navbar,
-        body {
-            background-color: #E42D40;
-        }
-
-        .navbar code {
-            color: #fff;
-        }
-
-        @media screen and (min-width: 769px) {
-            .hero.is-medium .hero-body {
-                padding-bottom: 6rem;
-                padding-top: 6rem;
-            }
-        }
-
-        .rounded {
-            border-radius: 50%;
-            padding: 1.5rem;
-        }
-
-
-        #faces {
-            margin-left: 12vw;
-            margin-right: 12vw;
-        }
-
-        .social-embed {
-            max-height: 400px;
-        }
-    </style>
 
     <!-- Favicon configurations... Ignore these if you are a beginner-->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icons/apple-touch-icon-57x57.png" />
@@ -96,10 +55,11 @@
 <body>
     <div id="fb-root"></div>
     <script>
-        (function (d, s, id) {
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
+            js = d.createElement(s);
+            js.id = id;
             js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=535422936849147";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
@@ -137,10 +97,7 @@
                             <hr>
 
                             <div class="notification is-light">
-                                Thanks for coming to our meeting last week! <br />
-                                Next meeting will be: <strong><span id="meeting-date">Oct. 11</span></strong>&nbsp;after
-                                school (2:45 - 4:00) in <strong>Lab 15</strong>. Topic: <strong><span id="meeting-topic"><a href="#">!Light Challenge by MLH</a></span></strong>.<br />
-                                You do not have to bring your laptops. But if you can, please bring them. Good luck on your PSATs!
+                                <span id="announced">Thanks for coming to our meeting last week!</span> <br /> Next meeting will be: <strong><span id="meeting-date"></span></strong>&nbsp;after school (2:45 - 4:00) in <strong>Room 262</strong>.
                             </div>
                             <!--<div class="notification is-dark">
                                 Returning members: your summer project will be due September 30 on the Shipit Platform! If you haven't started yet, better
@@ -148,7 +105,7 @@
                                 <a href="https://go.mdhack.tech/cantb4884">go.mdhack.tech/cantb4884</a> &nbsp;Additionally,
                                 you may need a <a href="https://github.com/">GitHub</a> account to post your projects.
                             </div>-->
-                            <a class="button is-danger is-medium is-inverted is-outlined animated fadeInUp" href="https://join.mdhack.tech/">Join the Club!</a>                            &emsp;
+                            <a class="button is-danger is-medium is-inverted is-outlined animated fadeInUp" href="https://join.mdhack.tech/">Join the Club!</a> &emsp;
                             <a class="button is-danger is-medium is-inverted is-outlined animated fadeInUp" href="https://shipit.hackclub.com/">Ship Your Project!</a>
 
                         </div>
@@ -175,11 +132,8 @@
                             <div class="card-content">
                                 <p class="title" style="margin-bottom: 0"><i class="fa fa-question-circle-o" aria-hidden="true"></i></p>
                                 <p class="title is-4">Who are we?</p>
-                                <p>Wootton Hack Club is a new club starting in 2017 at Wootton High School. Members will explore
-                                    topics in different computer science fields such as game development, algorithms, open
-                                    source software or other smaller code snippets. They will learn and communicate in order
-                                    to freely create their own projects, and conduct researches related to the computer engineering
-                                    field.
+                                <p>Wootton Hack Club is a new club starting in 2017 at Wootton High School. Members will explore topics in different computer science fields such as game development, algorithms, open source software or other smaller code
+                                    snippets. They will learn and communicate in order to freely create their own projects, and conduct researches related to the computer engineering field.
                                 </p>
                             </div>
                         </div>
@@ -189,11 +143,8 @@
                             <div class="card-content">
                                 <p class="title" style="margin-bottom: 0"><i class="fa fa-user-plus" aria-hidden="true"></i></p>
                                 <p class="title is-4">Who can join?</p>
-                                <p>Anyone! We will provide a free community for software developers and programmers to share
-                                    their experiences and launch projects to collaborate, but we will also be a place for
-                                    new programmers to get help from higher leveled ones. You will also have the opportunity
-                                    to meet with some professional speakers working in the computer science field to further
-                                    extend your knowledge.</p>
+                                <p>Anyone! We will provide a free community for software developers and programmers to share their experiences and launch projects to collaborate, but we will also be a place for new programmers to get help from higher leveled
+                                    ones. You will also have the opportunity to meet with some professional speakers working in the computer science field to further extend your knowledge.</p>
                             </div>
                         </div>
                     </div>
@@ -202,11 +153,8 @@
                             <div class="card-content">
                                 <p class="title" style="margin-bottom: 0"><i class="fa fa-gavel" aria-hidden="true"></i></p>
                                 <p class="title is-4">Are we competitive?</p>
-                                <p>Initially we were not at all interested in competitive programming. But this year we've decided
-                                    to participate in CTF (Capture-The-Flag) online cybersecurity games to compete against
-                                    other teams from other schools. Advanced knowledge in computer science, including the
-                                    ability to code in different common languages, is required. If you are interested in
-                                    participating, please contact Mingjie.
+                                <p>Initially we were not at all interested in competitive programming. But this year we've decided to participate in CTF (Capture-The-Flag) online cybersecurity games to compete against other teams from other schools. Advanced
+                                    knowledge in computer science, including the ability to code in different common languages, is required. If you are interested in participating, please contact Mingjie.
                                 </p>
                             </div>
                         </div>
@@ -274,6 +222,7 @@
                             </div>
                         </div>
                     </div>
+                    <!--
                     <div class="columns">
                         <div class="column is-one-fourth">
                             <div class="box" style="text-align: center">
@@ -324,10 +273,11 @@
                             </div>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
         </section>
-
+<!--
         <section>
             <div class="hero is-light">
                 <div class="hero-body" style="padding: 44px;">
@@ -365,7 +315,7 @@
                 </div>
             </div>
         </section>
-
+-->
         <!--<section>
             <div class="hero is-light">
                 <div class="hero-body" style="padding: 44px;">
@@ -423,6 +373,7 @@
             </div>
         </section>
     </main>
+    <script src="assets/dist/mdhack.min.js"></script>
     <script src="https://use.fontawesome.com/41132a62d5.js"></script>
 </body>
 
