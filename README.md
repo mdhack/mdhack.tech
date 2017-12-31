@@ -6,6 +6,8 @@ Hope you didn't see anything wrong.
 
 If you messed up while improving this code, contact Mingjie the master via email [jiang@mingjie.info](mailto:jiang@mingjie.info) to get punished and fixed!
 
+Do not forget to run `gulp build` after making changes to minize assets!
+
 ## License
 ```
 MIT License
