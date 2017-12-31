@@ -13,6 +13,11 @@ const CSS_PATHS = [
     "assets/css/**/*.css"
 ];
 
+const SASS_PATHS = [
+  "assets/sass/**/*.scss",
+  "assets/sass/**/*.sass"  
+];
+
 const JS_PATHS = [
     "node_modules/fuse.js/dist/fuse.js",
     "node_modules/geolib/dist/geolib.js",
@@ -24,10 +29,18 @@ gulp.task("default", ["watch"]);
 
 gulp.task("build", ["build-css", "build-js"]);
 
-gulp.task('build-css', function () {	
-	return gulp.src(CSS_PATHS)
-		.pipe(concat('mdhack.min.css'))
-		.pipe(gulp.dest('assets/dist/'));
+gulp.task("build-css", cb => {
+    pump([
+        gulp.src(SASS_PATHS),
+        sass(),
+        autoPrefixer(),
+        cleanCSS({
+            compatibility: "ie8",
+            rebase: false
+        }),
+        concat("mdhack.min.css"),
+        gulp.dest("assets/dist/")
+    ], cb);
 });
 
 gulp.task("build-js", cb => {

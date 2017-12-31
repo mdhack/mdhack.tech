@@ -1,0 +1,30 @@
+// Font Awesome
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+
+//Bulma
+@import "../../node_modules/bulma/sass/utilities/functions";
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+
+//Animate
+@import "../../node_modules/animate-sass/animate";
+
+// Variables
+$black: #384046;
+$grey: #dde1e4;
+$grey-light: #f9f9fa;
+$red: #e42d42;
+
+$family-sans-serif: Averta, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+$radius: 4px;
+
+$primary: $red;
+$family-primary: $family-sans-serif;
+
+$body-color: $black;
+
+$link: $primary;
+$link-hover: $primary;
+
+// Bulma
+@import "../../node_modules/bulma/bulma";
