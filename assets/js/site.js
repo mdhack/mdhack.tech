@@ -1,5 +1,5 @@
 var overRideTime = "";
-var overRideAnnoucement = "Hope you had a great winter break! Your projects are due at the next meeting. Bring something that you are proud of!";
+var overRideAnnoucement = "";
 
 window.onload = function() {
     if (overRideTime == "") {
