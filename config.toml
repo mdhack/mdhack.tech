@@ -1,0 +1,15 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Wootton Hack Club"
+
+copyright = "&copy; Wootton Hack Club. All Rights Reserved." #     Copyright notice. This will be displayed in the footer.
+canonifyurls = true
+
+theme = "hugo-paper"
+
+[params]
+# ga_api_key = "Your Google Analytics tracking id"
+# avatar = "../../img/avatar.jpg"
+bio = "Wootton Hack Club is a new club started in 2017. Members will explore topics in different computer science fields such as game development, algorithms, open source software or other smaller code snippets. They will learn and communicate in order to freely create their own projects, and conduct researches related to the computer engineering field."
+github = "http://github.com/woottonhack"
+twitter = "https://twitter.com/woottonhack"
